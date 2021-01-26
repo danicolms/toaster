@@ -155,5 +155,5 @@ const useToast = () => {
   return toastHelpers;
 };
 
-export { ToastContext, useToast };
+export { useToast };
 export default ToastProvider;
