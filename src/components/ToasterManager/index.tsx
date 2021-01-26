@@ -51,7 +51,6 @@ const setToastComponent = (styledComponents: IToastComponents) => {
   );
 };
 
-console.log(toastComponents);
 const getToastComponent = (message: string, severity: Severity) => {
   switch (severity) {
     case "success":
@@ -153,7 +152,6 @@ const ToastProvider: React.FunctionComponent<IToastContext> = ({
 
 const useToast = () => {
   const toastHelpers = useContext(ToastContext);
-  console.log("--", toastHelpers);
   return toastHelpers;
 };
 
