@@ -3,6 +3,7 @@
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom", "es2017"],
+    "declaration": true,
     "sourceMap": true,
     "allowJs": true,
     "jsx": "react",
@@ -21,5 +22,5 @@
     "outDir": "./lib",
     "skipLibCheck": true
   },
-  "include": ["./src/components/**/*"]
+  "include": ["./src/components/ToasterManager/*"]
 }

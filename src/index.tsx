@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { render } from "react-dom";
-import ToastProvider, { useToast } from "./components/ToasterManager";
+import ToastProvider, { useToast } from "@danicolms/toaster";
 
 const TestComponent = () => {
   const toastActions = useToast();

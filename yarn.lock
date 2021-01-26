@@ -847,6 +847,16 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@danicolms/toaster@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@danicolms/toaster/-/toaster-1.0.1.tgz#c4c6972d6d0883ca0ebab2caa0949374c5a888a2"
+  integrity sha512-jaEjkH4Q8f6qwedZCbZxFYuXTIQwRO2cBUJQHOaJfM86ggMpEa0AZ43KD35TbdX5MA5FWcrJ3bGrPVgxsdI29A==
+  dependencies:
+    framer-motion "^3.2.2-rc.1"
+    react ">=16.8"
+    react-dom ">=16.8"
+    styled-components "^5.2.1"
+
 "@emotion/is-prop-valid@^0.8.2", "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
