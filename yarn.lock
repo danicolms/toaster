@@ -857,6 +857,28 @@
     react-dom ">=16.8"
     styled-components "^5.2.1"
 
+"@danicolms/toaster@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@danicolms/toaster/-/toaster-1.0.3.tgz#01fe52c907c1399bc5fe51631b41238fdd7d7e22"
+  integrity sha512-g4ZFc8wgGQZEIj2jTqfk8VpZgrBCk7I7Lozwwm9hLamJUFjjugLh7p5X+rF37g6aq5vfoQhbVEL8Eri5gsBtfw==
+  dependencies:
+    "@danicolms/toaster" "^1.0.1"
+    framer-motion "^3.2.2-rc.1"
+    react ">=16.8"
+    react-dom ">=16.8"
+    styled-components "^5.2.1"
+
+"@danicolms/toaster@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@danicolms/toaster/-/toaster-1.0.4.tgz#f835d0cdb1732fbf01e3d6425fdc10ac7551075c"
+  integrity sha512-7qLjQ0m1P7ajE3WvRDfXLyFmAx7yeeORmOR1H6b6i6Djf8pYvqcgAnG+JbA6Bh6hlccX6vC7eP4FU2KCilBIUQ==
+  dependencies:
+    "@danicolms/toaster" "^1.0.3"
+    framer-motion "^3.2.2-rc.1"
+    react ">=16.8"
+    react-dom ">=16.8"
+    styled-components "^5.2.1"
+
 "@emotion/is-prop-valid@^0.8.2", "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"

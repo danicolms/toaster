@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@danicolms/toaster": "^1.0.3",
+    "@danicolms/toaster": "^1.0.4",
     "framer-motion": "^3.2.2-rc.1",
     "react": ">=16.8",
     "react-dom": ">=16.8",
