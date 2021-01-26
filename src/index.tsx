@@ -8,18 +8,18 @@ const TestComponent = () => {
   useEffect(() => {
     if (toastActions) {
       toastActions.addToast("Hello", "success");
+      toastActions.addToast("Hello", "error");
+      toastActions.addToast("Hello", "warning");
+      toastActions.addToast("Hello", "info");
     }
   }, []);
   return <div style={{ height: "100vh" }}> Im a test component</div>;
 };
 
-const SUCCESS = (message) => (
-  <div style={{ background: "red" }}> {message}</div>
-);
 class App extends React.Component {
   render() {
     return (
-      <ToastProvider toastComponents={{ success: SUCCESS }}>
+      <ToastProvider>
         <TestComponent></TestComponent>
       </ToastProvider>
     );

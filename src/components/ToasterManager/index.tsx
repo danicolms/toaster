@@ -15,25 +15,53 @@ interface IToast {
 interface IToastContainer {
   toasts: IToast[];
 }
-type IToastProvider = {
+
+interface IToastContext {
+  toastComponents?: IToastComponents;
+}
+
+interface IToastProvider {
   addToast: (message: string, severity: Severity) => void;
   removeToast: (id: number) => void;
-};
+}
 
-const EMPTY_COMPONENT = (message) => <></>;
+interface IToastComponents {
+  success?: (message: string) => React.FunctionComponent;
+  error?: (message: string) => React.FunctionComponent;
+  warning?: (message: string) => React.FunctionComponent;
+  info?: (message: string) => React.FunctionComponent;
+}
+
+const EMPTY_COMPONENT: React.FunctionComponent = () => {
+  return <></>;
+};
 
 let toastComponents = {
   success: EMPTY_COMPONENT,
+  error: EMPTY_COMPONENT,
+  warning: EMPTY_COMPONENT,
+  info: EMPTY_COMPONENT,
 };
 
-const setToastComponent = ({ success }) => {
-  toastComponents["success"] = success;
+const setToastComponent = (styledComponents: IToastComponents) => {
+  Object.entries(styledComponents).forEach(
+    ([key, component]: [string, React.FunctionComponent]) => {
+      toastComponents[key] = component;
+    }
+  );
 };
 
+console.log(toastComponents);
 const getToastComponent = (message: string, severity: Severity) => {
   switch (severity) {
     case "success":
       return toastComponents.success(message);
+    case "error":
+      return toastComponents.error(message);
+    case "warning":
+      return toastComponents.warning(message);
+    case "info":
+      return toastComponents.info(message);
   }
 };
 const Toast: React.FunctionComponent<IToast> = ({ id, message, severity }) => {
@@ -85,15 +113,16 @@ type ContextValue = IToastProvider | undefined;
 const ToastContext = React.createContext<ContextValue>(undefined);
 let id = 1;
 
-const ToastProvider: React.FunctionComponent = ({
+const ToastProvider: React.FunctionComponent<IToastContext> = ({
   children,
   toastComponents,
 }) => {
   const [toasts, setToasts] = useState<IToast[]>([]);
 
-  console.log
   useEffect(() => {
-    setToastComponent(toastComponents);
+    if (toastComponents) {
+      setToastComponent(toastComponents as IToastComponents);
+    }
   }, []);
   const addToast = useCallback(
     (message: string, severity: Severity) => {
